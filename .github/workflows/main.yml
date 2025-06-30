@@ -5,10 +5,10 @@ name: React CI/CD with Docker
 on:
   push:
     branches:
-      - main # Jalankan workflow ini setiap kali ada push ke branch 'main'
+      - master # Jalankan workflow ini setiap kali ada push ke branch 'master'
   pull_request:
     branches:
-      - main # Jalankan workflow ini setiap kali ada pull request ke branch 'main'
+      - master # Jalankan workflow ini setiap kali ada pull request ke branch 'master'
 
 jobs:
   build_and_test:
