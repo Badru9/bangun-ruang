@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bangun-ruang-deployment
+  labels:
+    app: bangun-ruang
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bangun-ruang
+  template:
+    metadata:
+      labels:
+        app: bangun-ruang
+    spec:
+      containers:
+        - name: ghcr.io/Badru9/bangun-ruang:latest
+          image: ghcr.io/Badru9/bangun-ruang:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: '64Mi'
+              cpu: '50m'
+            limits:
+              memory: '128Mi'
+              cpu: '100m'
+      imagePullSecrets:
+        - name: regcred
