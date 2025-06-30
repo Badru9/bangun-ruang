@@ -15,7 +15,7 @@ spec:
         app: bangun-ruang
     spec:
       containers:
-        - name: ghcr.io/Badru9/bangun-ruang:latest
+        - name: bangun-ruang-app-container
           image: ghcr.io/Badru9/bangun-ruang:latest
           ports:
             - containerPort: 80
