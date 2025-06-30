@@ -1,4 +1,9 @@
 {
+  "compilerOptions": {
+    "types": ["vitest/globals", "vite/client", "vitest/import.meta"],
+    "moduleResolution": "bundler",
+    "module": "preserve"
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
